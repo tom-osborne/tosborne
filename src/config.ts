@@ -1,4 +1,4 @@
-import avatarImg from './assets/images/site/avatar.svg';
+import avatarImg from './assets/images/site/TO-profile.jpg';
 import ogDefaultImg from './assets/images/site/og-default.svg';
 import type { SiteConfig, NavItem, SocialLink, GiscusConfig } from './types/config';
 
@@ -14,7 +14,7 @@ export const SITE_IMAGES = {
   ogDefault: ogDefaultImg,
 } as const;
 
-export const locales = ['en', 'fr'] as const;
+export const locales = ['en'] as const;
 export type Locale = (typeof locales)[number];
 
 /**
@@ -49,16 +49,16 @@ export const SITE: SiteConfig = {
   // ==========================================
 
   /** Default site title used as homepage <title> and meta. */
-  title: 'Chirping Astro',
+  title: 'Tom Osborne',
   /** Site tagline / description. */
   description:
-    'A modern, multilingual Astro v6 theme inspired by Chirpy — built with Tailwind v4, daisyUI, MDX, Pagefind, and Giscus.',
+    'Epicor ERP Specialist with 20 years experience in Motorsport and Manufacturing',
   /** Author/handle shown in footer + meta. */
   author: {
-    name: 'Chirping Astro',
+    name: 'Tom Osborne',
     url: GITHUB_HANDLE ? `https://github.com/${GITHUB_HANDLE}` : undefined,
     avatar: avatarImg,
-    bio: 'A text-focused Astro V6 theme.',
+    bio: 'Epicor ERP Specialist with 20 years experience in Motorsport and Manufacturing',
   },
   /** Default OG image. */
   defaultOgImage: ogDefaultImg.src,
@@ -132,6 +132,10 @@ export const NAV: readonly NavItem[] = [
  * literal entry below — the type is `SocialLink`.
  */
 export const SOCIALS: readonly SocialLink[] = [
+  { label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/tomosborne5/',
+    icon: 'simple-icons:linkedin'
+  },
   GITHUB_HANDLE && {
     label: 'GitHub',
     href: `https://github.com/${GITHUB_HANDLE}`,
