@@ -29,6 +29,7 @@ const GITHUB_HANDLE = import.meta.env.PUBLIC_GITHUB_HANDLE ?? '';
 const GITHUB_REPO = import.meta.env.PUBLIC_GITHUB_REPO ?? 'chirping-astro';
 const TWITTER_HANDLE = import.meta.env.PUBLIC_TWITTER_HANDLE ?? '';
 const CONTACT_EMAIL = import.meta.env.PUBLIC_CONTACT_EMAIL ?? '';
+const LINKEDIN_HANDLE = import.meta.env.PUBLIC_LINKEDIN_HANDLE ?? '';
 const THEME_REPO_URL = 'https://github.com/kannansuresh/chirping-astro';
 
 /**
@@ -52,13 +53,13 @@ export const SITE: SiteConfig = {
   title: 'Tom Osborne',
   /** Site tagline / description. */
   description:
-    'Epicor ERP Specialist with 20 years experience in Motorsport and Manufacturing',
+    'Epicor enthusiast with 20 years experience in Motorsport and Manufacturing',
   /** Author/handle shown in footer + meta. */
   author: {
     name: 'Tom Osborne',
     url: GITHUB_HANDLE ? `https://github.com/${GITHUB_HANDLE}` : undefined,
     avatar: avatarImg,
-    bio: 'Epicor ERP Specialist with 20 years experience in Motorsport and Manufacturing',
+    bio: 'Epicor enthusiast with 20 years experience in Motorsport and Manufacturing',
   },
   /** Default OG image. */
   defaultOgImage: ogDefaultImg.src,
@@ -69,9 +70,9 @@ export const SITE: SiteConfig = {
   /** Site-wide default for whether posts should display their featured image. */
   showFeaturedImages: true,
   /** Wrap the article body of posts and pages in a bordered, card-like container. */
-  boxedArticles: false,
+  boxedArticles: true,
   /** Allow listing cards to grow when title/description content is longer. */
-  dynamicPostCardHeight: false,
+  dynamicPostCardHeight: true,
   /** Automatically generate Open Graph images for posts that don't have a `heroImage`. */
   autoOgImage: true,
   /** Show a link to the Privacy Policy page in the footer. */
@@ -111,7 +112,7 @@ export const SITE: SiteConfig = {
   /** Default locale. Changing this is a breaking, atomic, multi-file operation. */
   defaultLocale: 'en',
   /** Show the language switcher and link to translated pages. */
-  multilingual: true,
+  multilingual: false,
 };
 
 export const NAV: readonly NavItem[] = [
@@ -133,7 +134,7 @@ export const NAV: readonly NavItem[] = [
  */
 export const SOCIALS: readonly SocialLink[] = [
   { label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/tomosborne5/',
+    href: `https://www.linkedin.com/in/${LINKEDIN_HANDLE}/`,
     icon: 'simple-icons:linkedin'
   },
   GITHUB_HANDLE && {
