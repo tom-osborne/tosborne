@@ -5,7 +5,7 @@ pubDate: 2026-05-03
 tags: [getting-started, tutorial]
 categories: [Guide]
 translationKey: getting-started
-pinned: true
+pinned: false
 toc: true
 ---
 

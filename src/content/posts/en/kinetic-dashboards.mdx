@@ -1,23 +1,28 @@
----
-title: 'Kinetic Dashboards'
-description: 'All the things I have learnt while developing Kinetic Dashboards.'
-pubDate: 2026-05-18
-tags: [kinetic, application-studio, dashboards]
-categories: [Application Studio]
-pinned: false
-toc: true
----
+    ---
+    title: 'Kinetic Dashboards'
+    description: 'All the things I have learnt while developing Kinetic Dashboards.'
+    pubDate: 2026-05-18
+    tags: [kinetic, application-studio, dashboards]
+    categories: [Application Studio]
+    pinned: false
+    toc: true
+    ---
 
 import Callout from '../../../components/Callout.astro';
 
-I always recomment starting from scratch when building a dashboard. The conversion tool can do a decent job, but it will often cause a lot of confusion when you need to make changes. I've found that, while it may take a little longer to build from scratch, you will end up knowing the Dashboard far better and it will make future maintenance much easier.
+I always recommend starting from scratch when building a dashboard. The conversion tool can do a decent job, but it will often cause a lot of confusion when you need to make changes. I've found that, while it may take a little longer to build from scratch, you will end up knowing the dashboard far better and it will make future maintenance much easier. You'll also learn a lot more!
 
 # Creating the Dashboard
-The initial setup of a Dashboard is quite straighforward. The first thing to do is to add the DataViews that we need, and to do this, I would recommend making use of the Wizard.
+The initial setup of a Dashboard is quite straighforward. The first thing to do is to add the **Data Views** that we need, and to do this, I would recommend making use of the Wizard.
 
-<Callout type="info">
-  DataViews are the foundation of a Kinetic App.
-</Callout>
+* Open Application Studio and click the <kbd class="kbd">+</kbd> button in the top right corner to add a new dashboard.
+* Create a new app with the Wizard
+* On the **Application Details** page, give your dashboard a suitable name.
+* Select the **Source Type** that you will use to populate the Dashboard. For this example, we will use the **BAQ** source type.
+* Enter the BAQ ID and give the Data View a suitable name. **Do not add any Filters** at this point, these can be added later. 
+* Leave the **Grid details** settings default. Views and filters can be added later.
+* Uncheck the **Add a Form Card** option. This is generally not required and can be added later if so.
+* Click **Next** to create the Dashboard.
 
 # Grid Filtering
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

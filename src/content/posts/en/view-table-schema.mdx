@@ -1,0 +1,32 @@
+---
+title: 'View Table Schema'
+description: 'Viewing the schema of a table in SQL Server Management Studio.'
+pubDate: 2026-05-18
+tags: [sql-queries]
+categories: [SQL Queries]
+pinned: false
+toc: true
+---
+import { Image } from 'astro:assets';
+import viewTableSchemaImage from '../../../assets/images/site/view-table-schema-01.png';
+
+```sql
+SELECT 
+    c.name AS ColumnName, 
+    t.name AS DataType
+  --  c.max_length AS MaxLength, 
+  --  c.is_nullable AS IsNullable,
+  --  fk.name AS ForeignKeyName, 
+  --  rt.name AS ReferencedTable, 
+  --  rc.name AS ReferencedColumn
+FROM sys.columns c
+JOIN sys.types t ON c.user_type_id = t.user_type_id
+LEFT JOIN sys.foreign_key_columns fkc ON c.column_id = fkc.parent_column_id AND c.object_id = fkc.parent_object_id
+LEFT JOIN sys.foreign_keys fk ON fkc.constraint_object_id = fk.object_id
+LEFT JOIN sys.tables rt ON fkc.referenced_object_id = rt.object_id
+LEFT JOIN sys.columns rc ON fkc.referenced_column_id = rc.column_id AND rt.object_id = rc.object_id
+WHERE OBJECT_SCHEMA_NAME(c.object_id) = 'Erp'
+AND OBJECT_NAME(c.object_id) = 'Customer' -- << Replace with required table name
+```
+
+<Image src={viewTableSchemaImage} alt="View Table Schema" width={800} />
